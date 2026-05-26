@@ -1,0 +1,51 @@
+.container {
+    background-color: #ffffff; /* Card branco */
+    border: 0.5px solid #e2e8f0; /* Borda cinza bem clarinha, quase invisível */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    
+    width: 45%;
+    min-height: 150px;
+}
+
+.title p {
+    font-family: var(--secondary-font);
+    color: var(--principal);
+    font-size: 16px;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+
+    padding-bottom: 10px;
+}
+
+.ativo {
+    width: 40%;
+}
+
+.header p {
+    font-family: var(--secondary-font);
+    color: var(--principal);
+    font-size: 14px;
+    margin: 0;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60%;
+
+    gap: 15px;
+}
+
+.rowInfo {
+    height: 50vh;
+}

@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10vh;
+    background-color: var(--principal);
+}
+
+.title {
+    margin-left: 5%;
+    color: var(--textW);
+    font-family: var(--principal-font);
+    font-weight: 400;
+    font-style: normal;
+}

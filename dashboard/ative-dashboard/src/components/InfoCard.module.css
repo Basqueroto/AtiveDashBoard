@@ -1,0 +1,26 @@
+.container {
+    background-color: #ffffff; /* Card branco */
+    border: 0.5px solid #e2e8f0; /* Borda cinza bem clarinha, quase invisível */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    min-width: 150px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoCardTitle p, .infoCardSubtitle p {
+    font-family: var(--secondary-font);
+    color: var(--principal);
+    font-size: 14px;
+    margin: 0;
+}
+
+.infoCardValue p {
+    font-family: var(--secondary-font);
+    color: var(--principal);
+    font-size: 25px;
+    margin: 0;
+}
+

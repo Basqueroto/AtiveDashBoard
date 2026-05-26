@@ -1,0 +1,29 @@
+:root {
+  --principal: #0d1b2a;
+  --textW: #e0e1dd;
+  --background-grey: #e0e1dd;
+  --principal-font: "Boldonse", system-ui;
+  --secondary-font: "Roboto", system-ui;
+  --secondary-color: #1b263b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.containerBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+  overflow-y: hidden;
+}
+
+.separator {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 40px;
+}
