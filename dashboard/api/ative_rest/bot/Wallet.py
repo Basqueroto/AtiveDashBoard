@@ -32,7 +32,7 @@ class Wallet:
                     ativo="SOLUSDT",         
                     preco=current_price,
                     qtd=int(self.positions),     
-                    sinal='V'                
+                    sinal='COMPRAR'                
                 )
                 print("💾 Venda salva no banco de dados com sucesso!")
             except Exception as e:
@@ -59,7 +59,7 @@ class Wallet:
                     ativo="SOLUSDT",         
                     preco=current_price,
                     qtd=int(units_sold),     
-                    sinal='V'                
+                    sinal='VENDER'                
                 )
                 print("💾 Venda salva no banco de dados com sucesso!")
             except Exception as e:

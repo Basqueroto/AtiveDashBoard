@@ -63,13 +63,13 @@ export default function Historico() {
                     ) : (
                         trades.map((trade) => (
                             <div key={trade.id} className={styles.rowData}>
-                                <p>{trade.hora}</p>
+                                <p>{trade.hora.slice(0,5)}</p>
                                 <p>{trade.ativo}</p>
                                 <p>R$ {Number(trade.preco).toFixed(2)}</p>
                                 <p>{trade.qtd}</p>
                                 {/* Um toque de estilo baseado no sinal (opcional) */}
-                                <p style={{ color: trade.sinal === 'C' ? '#4caf50' : '#f44336', fontWeight: 'bold' }}>
-                                    {trade.sinal === 'C' ? 'COMPRA' : 'VENDA'}
+                                <p style={{ color: trade.sinal === 'COMPRAR' ? '#4caf50' : '#f44336', fontWeight: 'bold' }}>
+                                    {trade.sinal === 'COMPRAR' ? 'COMPRA' : 'VENDA'}
                                 </p>
                             </div>
                         ))

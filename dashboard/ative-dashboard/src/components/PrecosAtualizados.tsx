@@ -28,6 +28,7 @@ export default function PrecosAtualizados() {
                 throw new Error('Erro na requisição');
             }
             const data: BotActualStatus = await response.json();
+            console.log(data)
             setBotData(data); 
             console.log('Dados atuais recebidos:', data);
         } catch (error) {
@@ -55,12 +56,10 @@ export default function PrecosAtualizados() {
                     <div className={styles.ativo}>
                         <p>Ativo</p>
                     </div>
-                    <div className={styles.infos}>
                         <p>Preço</p>
                         <p>Variação rápida</p>
                         <p>Variação lenta</p>
                         <p>Sinal</p>
-                    </div>  
                 </div>
                 <div className={styles.rowInfo}>
                     {/* Se botData for null (ainda não carregou), exibe aviso. Caso contrário, joga na tela sem usar .map() */}
@@ -70,13 +69,15 @@ export default function PrecosAtualizados() {
                         </div>
                     ) : (
                         <div className={styles.rowData}>
-                            <p>{botData.ativo}</p>
-                            <p>R$ {Number(botData.preco_atual).toFixed(2)}</p>
-                            <p>{Number(botData.ma_rapida).toFixed(2)}</p>
-                            <p>{Number(botData.ma_lenta).toFixed(2)}</p>
-                            <p style={{ color: botData.sinal === 'C' ? '#4caf50' : '#f44336', fontWeight: 'bold' }}>
-                                {botData.sinal === 'C' ? 'COMPRA' : 'VENDA'}
-                            </p>
+                            <p className={styles.ativo}>{botData.ativo}</p>
+                            
+                                <p >R$ {Number(botData.preco_atual).toFixed(2)}</p>
+                                <p>{Number(botData.ma_rapida).toFixed(2)}</p>
+                                <p>{Number(botData.ma_lenta).toFixed(2)}</p>
+                                <p style={{ color: botData.sinal === 'COMPRAR' ? '#4caf50' : '#f44336', fontWeight: 'bold' }}>
+                                    {botData.sinal === 'COMPRAR' ? 'COMPRA' : 'VENDA'}
+                                </p>
+                            
                         </div>
                     )}
                 </div>

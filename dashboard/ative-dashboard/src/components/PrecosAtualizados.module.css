@@ -17,8 +17,8 @@
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
     align-items: center;
     border-bottom: 1px solid #e2e8f0;
 
@@ -36,24 +36,13 @@
     margin: 0;
 }
 
-.infos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 60%;
-
-    gap: 15px;
-}
-
 .rowInfo {
     height: 50vh;
 }
 
 .rowData {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
     border-bottom: 1px solid #e2e8f0;
 
     padding: 10px 0px;
